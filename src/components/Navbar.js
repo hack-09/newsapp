@@ -19,7 +19,7 @@ export class Navbar extends Component {
     e.preventDefault();
     this.props.onSearch(this.state.searchInput);
   };
-  
+
   render() {
     return (
       <div>
