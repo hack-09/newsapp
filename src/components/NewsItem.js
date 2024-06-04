@@ -1,9 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 
-export class NewsItem extends Component {
-  render() { 
-    let {title, description, imageUrl, newsUrl, author, date, source} = this.props;
-    const fallbackImageUrl = "https://c.ndtvimg.com/2021-06/sb4deh4g_boeing-737-max-reuters-650_625x300_17_June_21.jpg";
+const NewsItem =(props)=>{
+    let {title, description, imageUrl, newsUrl, author, date, source} = props;
+    const fallbackImageUrl = "https://fdn.gsmarena.com/imgroot/news/21/08/xiaomi-smart-home-india-annoucnements/-476x249w4/gsmarena_00.jpg";
     return (
       <div className="my-3">
         <div className="card ">
@@ -26,7 +25,6 @@ export class NewsItem extends Component {
         </div>
       </div>
     );
-  }
 }
 
 export default NewsItem;

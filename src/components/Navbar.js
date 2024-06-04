@@ -1,29 +1,28 @@
-import React, { Component } from "react";
+import React from "react";
 import {Link} from "react-router-dom";
 
 
-export class Navbar extends Component {
+const Navbar =()=> {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      searchInput: ''
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     searchInput: ''
+  //   };
+  // }
 
-  handleInputChange = (e) => {
-    this.setState({ searchInput: e.target.value });
-  };
+  // handleInputChange = (e) => {
+  //   this.setState({ searchInput: e.target.value });
+  // };
 
-  handleSubmit = (e) => {
-    e.preventDefault();
-    this.props.onSearch(this.state.searchInput);
-  };
+  // handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   this.props.onSearch(this.state.searchInput);
+  // };
 
-  render() {
     return (
-      <div>
-        <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
+      <div >
+        <nav className="navbar navbar-expand-lg bg-dark navbar-dark position-fixed-top">
           <div className="container-fluid">
             <a className="navbar-brand" href="/">
               NewsMonkey
@@ -57,16 +56,15 @@ export class Navbar extends Component {
                 <li className="nav-item"> <Link className="nav-link" to="/technology"> Technology </Link> </li>
                 
               </ul>
-              <form className="d-flex" role="search" onSubmit={this.handleSubmit}>
+              {/* <form className="d-flex" role="search" onSubmit={this.handleSubmit}>
                 <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" value={this.state.searchInput} onChange={this.handleInputChange}/>
                 <button className="btn btn-outline-warning" type="submit">Search</button>
-              </form>
+              </form> */}
             </div>
           </div>
         </nav>
       </div>
     );
-  }
 }
 
 export default Navbar;
